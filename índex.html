@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobrevivência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="menu">
+    <h1>🌲 SOBREVIVÊNCIA</h1>
+    <p>Sobreviva o máximo que puder!</p>
+
+    <button onclick="startGame()">JOGAR</button>
+
+    <p class="controls">
+      WASD = Mover | E = Coletar | F = Comer | Espaço = Atacar
+    </p>
+  </div>
+
+  <div id="game" class="hidden">
+
+    <div id="hud">
+      ❤️ Vida: <span id="vida">100</span>
+      🍖 Fome: <span id="fome">100</span>
+      💧 Sede: <span id="sede">100</span>
+      🌙 Dia: <span id="dia">1</span>
+      ⏱️ <span id="tempo">0</span>s
+    </div>
+
+    <div id="world">
+
+      <div id="player">🧑</div>
+
+      <div class="tree" style="left:100px;top:120px">🌳</div>
+      <div class="tree" style="left:600px;top:100px">🌳</div>
+      <div class="tree" style="left:300px;top:400px">🌳</div>
+      <div class="tree" style="left:750px;top:350px">🌳</div>
+
+      <div class="resource wood" style="left:200px;top:250px">🪵</div>
+
+      <div class="resource food" style="left:500px;top:300px">🍓</div>
+
+      <div class="resource water" style="left:700px;top:180px">💧</div>
+
+      <div id="enemy">👾</div>
+
+      <div id="campfire">🔥</div>
+
+    </div>
+
+    <div id="inventory">
+      🪵 Madeira: <span id="madeira">0</span> |
+      🍓 Comida: <span id="comida">0</span>
+    </div>
+
+  </div>
+
+  <div id="gameOver" class="hidden">
+
+    <h1>💀 VOCÊ MORREU</h1>
+
+    <p>
+      Você sobreviveu por
+      <span id="finalTime">0</span>
+      segundos.
+    </p>
+
+    <button onclick="location.reload()">
+      TENTAR NOVAMENTE
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
